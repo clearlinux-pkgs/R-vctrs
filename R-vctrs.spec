@@ -4,7 +4,7 @@
 #
 Name     : R-vctrs
 Version  : 0.1.0
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/vctrs_0.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vctrs_0.1.0.tar.gz
 Summary  : Vector Helpers
@@ -12,15 +12,25 @@ Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-vctrs-lib = %{version}-%{release}
 Requires: R-backports
+Requires: R-digest
 Requires: R-glue
+Requires: R-mime
+Requires: R-rlang
+Requires: R-tibble
 Requires: R-zeallot
 BuildRequires : R-backports
+BuildRequires : R-digest
 BuildRequires : R-glue
+BuildRequires : R-mime
+BuildRequires : R-rlang
+BuildRequires : R-tibble
 BuildRequires : R-zeallot
 BuildRequires : buildreq-R
 
 %description
-# vctrs <img src="man/figures/logo.png" align="right" width=120 height=139 alt="" />
+to provide tools for consistent and well-founded type-coercion and 
+    size-recycling, and are in turn connected to ideas of type- and 
+    size-stability useful for analyzing function interfaces.
 
 %package lib
 Summary: lib components for the R-vctrs package.
@@ -37,13 +47,13 @@ lib components for the R-vctrs package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1557111528
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562089533
 
 %install
-export SOURCE_DATE_EPOCH=1557111528
+export SOURCE_DATE_EPOCH=1562089533
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -72,7 +82,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0

@@ -1,4 +1,3 @@
 0.1.0
-R-backports
-R-glue
-R-zeallot
+R-mime
+R-tibble
