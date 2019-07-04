@@ -4,7 +4,7 @@
 #
 Name     : R-vctrs
 Version  : 0.1.0
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/vctrs_0.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vctrs_0.1.0.tar.gz
 Summary  : Vector Helpers
@@ -14,14 +14,12 @@ Requires: R-vctrs-lib = %{version}-%{release}
 Requires: R-backports
 Requires: R-digest
 Requires: R-glue
-Requires: R-mime
 Requires: R-rlang
 Requires: R-tibble
 Requires: R-zeallot
 BuildRequires : R-backports
 BuildRequires : R-digest
 BuildRequires : R-glue
-BuildRequires : R-mime
 BuildRequires : R-rlang
 BuildRequires : R-tibble
 BuildRequires : R-zeallot
@@ -48,10 +46,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562089533
+export SOURCE_DATE_EPOCH=1562215413
 
 %install
-export SOURCE_DATE_EPOCH=1562089533
+export SOURCE_DATE_EPOCH=1562215413
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
