@@ -3,5 +3,6 @@ R-blob
 R-hms
 R-pillar
 R-testthat
+R-tibble
 R-tidyr
 R-tidyselect
