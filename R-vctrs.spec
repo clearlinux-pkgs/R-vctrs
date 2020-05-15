@@ -4,7 +4,7 @@
 #
 Name     : R-vctrs
 Version  : 0.3.0
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/vctrs_0.3.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vctrs_0.3.0.tar.gz
 Summary  : Vector Helpers
@@ -43,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589408226
+export SOURCE_DATE_EPOCH=1589574873
 
 %install
-export SOURCE_DATE_EPOCH=1589408226
+export SOURCE_DATE_EPOCH=1589574873
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
