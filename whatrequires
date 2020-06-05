@@ -1,8 +1,10 @@
 # This file contains recursive sources that require this package
 R-blob
+R-dplyr
+R-haven
 R-hms
+R-modelr
 R-pillar
-R-testthat
 R-tibble
 R-tidyr
 R-tidyselect
