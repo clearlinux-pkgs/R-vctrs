@@ -5,6 +5,7 @@ R-haven
 R-hms
 R-modelr
 R-pillar
+R-rsample
 R-tibble
 R-tidyr
 R-tidyselect
