@@ -3,6 +3,7 @@ R-blob
 R-dplyr
 R-haven
 R-hms
+R-labelled
 R-modelr
 R-pillar
 R-rsample
