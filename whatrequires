@@ -1,12 +1,16 @@
 # This file contains recursive sources that require this package
 R-blob
+R-dbplyr
+R-downlit
 R-dplyr
+R-dtplyr
 R-furrr
 R-haven
 R-hms
 R-labelled
 R-modelr
 R-pillar
+R-plotly
 R-rsample
 R-slider
 R-tibble
