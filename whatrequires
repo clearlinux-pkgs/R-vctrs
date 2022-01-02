@@ -1,18 +1,25 @@
 # This file contains recursive sources that require this package
+R-DBItest
 R-blob
 R-dbplyr
+R-distributional
 R-downlit
 R-dplyr
 R-dtplyr
 R-furrr
+R-googledrive
+R-googlesheets4
 R-haven
 R-hms
 R-labelled
 R-modelr
 R-pillar
 R-plotly
+R-posterior
+R-recipes
 R-rsample
 R-slider
 R-tibble
 R-tidyr
 R-tidyselect
+R-vroom
