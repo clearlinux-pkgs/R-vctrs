@@ -1,12 +1,14 @@
 # This file contains recursive sources that require this package
 R-DBItest
 R-blob
+R-clock
 R-dbplyr
 R-distributional
 R-downlit
 R-dplyr
 R-dtplyr
 R-furrr
+R-ggplot2
 R-googledrive
 R-googlesheets4
 R-hardhat
