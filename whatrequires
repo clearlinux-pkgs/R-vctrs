@@ -19,9 +19,11 @@ R-modelr
 R-pillar
 R-plotly
 R-posterior
+R-purrr
 R-recipes
 R-rsample
 R-slider
+R-stringr
 R-styler
 R-tibble
 R-tidyr
