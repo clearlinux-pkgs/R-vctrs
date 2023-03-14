@@ -4,7 +4,7 @@
 #
 Name     : R-vctrs
 Version  : 0.5.2
-Release  : 47
+Release  : 48
 URL      : https://cran.r-project.org/src/contrib/vctrs_0.5.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vctrs_0.5.2.tar.gz
 Summary  : Vector Helpers
@@ -21,9 +21,6 @@ BuildRequires : R-glue
 BuildRequires : R-lifecycle
 BuildRequires : R-rlang
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 used to provide tools for consistent and well-founded type-coercion
@@ -56,10 +53,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1674500267
+export SOURCE_DATE_EPOCH=1678827026
 
 %install
-export SOURCE_DATE_EPOCH=1674500267
+export SOURCE_DATE_EPOCH=1678827026
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-vctrs
 cp %{_builddir}/vctrs/LICENSE.note %{buildroot}/usr/share/package-licenses/R-vctrs/b4cf59cc3bbfb71e343bf658f63c2a3398e8b61f || :
