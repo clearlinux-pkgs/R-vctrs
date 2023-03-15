@@ -4,7 +4,7 @@
 #
 Name     : R-vctrs
 Version  : 0.5.2
-Release  : 48
+Release  : 49
 URL      : https://cran.r-project.org/src/contrib/vctrs_0.5.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vctrs_0.5.2.tar.gz
 Summary  : Vector Helpers
