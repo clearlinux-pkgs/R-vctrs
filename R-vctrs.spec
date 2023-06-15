@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-vctrs
-Version  : 0.6.2
-Release  : 53
-URL      : https://cran.r-project.org/src/contrib/vctrs_0.6.2.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/vctrs_0.6.2.tar.gz
+Version  : 0.6.3
+Release  : 54
+URL      : https://cran.r-project.org/src/contrib/vctrs_0.6.3.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/vctrs_0.6.3.tar.gz
 Summary  : Vector Helpers
 Group    : Development/Tools
 License  : MIT MPL-2.0
@@ -47,16 +47,19 @@ license components for the R-vctrs package.
 
 %prep
 %setup -q -n vctrs
+pushd ..
+cp -a vctrs buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682004979
+export SOURCE_DATE_EPOCH=1686844578
 
 %install
-export SOURCE_DATE_EPOCH=1682004979
+export SOURCE_DATE_EPOCH=1686844578
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-vctrs
 cp %{_builddir}/vctrs/LICENSE.note %{buildroot}/usr/share/package-licenses/R-vctrs/b4cf59cc3bbfb71e343bf658f63c2a3398e8b61f || :
@@ -96,6 +99,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc . || :
 
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
