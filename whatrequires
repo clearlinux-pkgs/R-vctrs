@@ -22,11 +22,13 @@ R-plotly
 R-posterior
 R-profvis
 R-purrr
+R-readODS
 R-recipes
 R-rsample
 R-slider
 R-stringr
 R-styler
+R-themis
 R-tibble
 R-tidyr
 R-tidyselect

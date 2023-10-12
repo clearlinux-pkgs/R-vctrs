@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-vctrs
-Version  : 0.6.3
-Release  : 55
-URL      : https://cran.r-project.org/src/contrib/vctrs_0.6.3.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/vctrs_0.6.3.tar.gz
+Version  : 0.6.4
+Release  : 56
+URL      : https://cran.r-project.org/src/contrib/vctrs_0.6.4.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/vctrs_0.6.4.tar.gz
 Summary  : Vector Helpers
 Group    : Development/Tools
 License  : MIT MPL-2.0
@@ -56,21 +56,21 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686844578
+export SOURCE_DATE_EPOCH=1697151865
 
 %install
-export SOURCE_DATE_EPOCH=1686844578
+export SOURCE_DATE_EPOCH=1697151865
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-vctrs
 cp %{_builddir}/vctrs/LICENSE.note %{buildroot}/usr/share/package-licenses/R-vctrs/b4cf59cc3bbfb71e343bf658f63c2a3398e8b61f || :
-export LANG=C.UTF-8
-export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
-export AR=gcc-ar
-export RANLIB=gcc-ranlib
-export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
+LANG=C.UTF-8
+CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
+FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -O3 -flto -fno-semantic-interposition "
+FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -O3 -flto -fno-semantic-interposition "
+CXXFLAGS="$CLEAR_INTERMEDIATE_CXXFLAGS -O3 -flto -fno-semantic-interposition "
+AR=gcc-ar
+RANLIB=gcc-ranlib
+LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
 
 mkdir -p ~/.R
